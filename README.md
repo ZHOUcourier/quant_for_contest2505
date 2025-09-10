@@ -7,6 +7,8 @@ This project provides a streamlined solution for preprocessing data in a Tonghua
 ## 步骤
 
 > 如果你只是完成基础的实现【策略前置操作】，那么按照这四个步骤来就足够了。
+>
+> 一开始想整个一条龙的，但可惜没空累了，就这样吧，抱歉，路径什么的可以自行探索下
 
 ### 1. 数据准备（请不要抱怨，个人获取数据就是这样步骤）
 
@@ -18,17 +20,15 @@ This project provides a streamlined solution for preprocessing data in a Tonghua
 
 数据来自[国泰君安CSMAR](https://data.csmar.com/)，顶部tab选择【数据中心】，依次点击【单表查询】【经济研究系列】【宏观经济】【经济行业快讯】【社会消费品零售总额表(月)】全选所有字段，下载csv，解压得到`CME_Mretailsales.csv`。
 
-<img width="1088" height="1119" alt="CME_Mretailsales" src="https://github.com/user-attachments/assets/c6e09396-ef49-4078-b8fa-0e697c3b67e2" />
+<img src="./README.assets/Screenshot 2025-08-09 at 11.39.43 PM.png" alt="Screenshot 2025-08-09 at 11.39.43 PM" style="zoom:25%;" />
 
 数据来自[国泰君安CSMAR](https://data.csmar.com/)，顶部tab选择【数据中心】，依次点击【单表查询】【经济研究系列】【宏观经济】【景气指数】【消费者景气指数月度文件】全选所有字段，下载csv，解压得到`CME_Mbcid2.csv`。
 
-<img width="1148" height="1113" alt="CME_Mbcid2" src="https://github.com/user-attachments/assets/877964b6-51c9-46a0-b603-f6f70fe35ff4" />
+<img src="./README.assets/Screenshot 2025-08-09 at 11.19.21 PM.png" alt="Screenshot 2025-08-09 at 11.19.21 PM" style="zoom:25%;" />
 
 数据来自[国泰君安CSMAR](https://data.csmar.com/)，顶部tab选择【数据中心】，依次点击【单表查询】【经济研究系列】【宏观经济】【价格指数】【居民消费价格分类指数月度文件】全选所有字段，下载csv，解压得到`CME_Mconsumerpriceratio.csv`。
 
-<img width="1085" height="1118" alt="CME_Mconsumerpriceratio" src="https://github.com/user-attachments/assets/7c053bf3-bbee-4feb-b8f2-873b28f6afb9" />
-
-三个csv文件获取到之后放到根目录下。
+<img src="./README.assets/Screenshot 2025-08-09 at 11.42.43 PM.png" alt="Screenshot 2025-08-09 at 11.42.43 PM" style="zoom:25%;" />
 
 #### 1.2 股票数据获取
 
@@ -38,13 +38,13 @@ This project provides a streamlined solution for preprocessing data in a Tonghua
 >
 > 如果从CSMAR获取的数据跨度在5年之内，则不必理会上述这段的处理
 
-数据来自[国泰君安CSMAR](https://data.csmar.com/)，顶部tab选择【数据中心】，依次点击【单表查询】【股票市场系列】【股票市场交易】【个股走势特征】【个股走势特征表】，全选所有字段，下载csv，解压
+数据来自[国泰君安CSMAR](https://data.csmar.com/)，顶部tab选择【数据中心】，依次点击【单表查询】【股票市场系列】【股票市场交易】【个股交易数据】【日个股回报率文件】，全选所有字段，下载csv，解压
 
-<img width="1087" height="1055" alt="dataprocess" src="https://github.com/user-attachments/assets/a1774b2c-9e06-47e6-a264-0c82f94dcdb9" />
+<img src="./README.assets/Screenshot 2025-08-31 at 4.14.18 PM.png" alt="Screenshot 2025-08-31 at 4.14.18 PM" style="zoom:25%;" />
 
 将获取到的csv数据文件放进`dataprocess`目录中。
 
-### 2. 创建虚拟环境、依赖安装，运行主程序
+### 2. 创建虚拟环境、依赖安装，运行各程序
 
 - 使用conda
 
@@ -61,26 +61,25 @@ This project provides a streamlined solution for preprocessing data in a Tonghua
   uv run main.py
   ```
 
-
-主程序整合了零散的代码步骤，程序运行可能需要十多分钟（数据处理、消费环境处理、消费敏感性处理、股票输赢家处理），结束后程序会在`upload`目录中放置`consumer_betas.csv `,              `safe_stock.csv`, `classification_results.csv`, `environment_predictions_new.csv`这几个文件。
+> ~~主程序整合了零散的代码步骤，程序运行可能需要十多分钟（数据处理、消费环境处理、消费敏感性处理、股票输赢家处理），结束后程序会在`upload`目录中放置`consumer_betas.csv `,              `safe_stock.csv`, `classification_results.csv`, `environment_predictions_new.csv`这几个文件。~~
 
 ### 3. 上传
 
 来到[同花顺supermind【我的研究】](https://quant.10jqka.com.cn/view/study-research.html)
 
-<img width="1603" height="928" alt="study-research" src="https://github.com/user-attachments/assets/d56cef34-1279-4871-9756-8a669d018e1d" />
+<img src="./README.assets/Screenshot 2025-08-09 at 7.14.29 PM.png" alt="Screenshot 2025-08-09 at 7.14.29 PM" style="zoom:50%;" />
 
 选择python3.8，启动服务器。稍等片刻之后进入jupyter-lab界面。点击【上传文件】按钮，上传`upload`文件夹内所有文件。完成后即可关闭这个页面。
 
-<img width="1174" height="998" alt="upload01" src="https://github.com/user-attachments/assets/f5ddfe41-3f7f-4179-a19c-b19468940be8" />
+<img src="./README.assets/Screenshot 2025-08-09 at 7.18.06 PM.png" alt="Screenshot 2025-08-09 at 7.18.06 PM" style="zoom: 25%;" />
 
-<img width="1009" height="598" alt="upload02" src="https://github.com/user-attachments/assets/38e6de66-8ae6-4309-b17a-7336793bda49" />
+<img src="./README.assets/Screenshot 2025-08-09 at 7.17.39 PM.png" alt="Screenshot 2025-08-09 at 7.15.43 PM" style="zoom: 25%;" />
 
 ### 4. 运行策略代码
 
 来到[同花顺supermind【我的策略】](https://quant.10jqka.com.cn/view/study-index.html#/)，点击【新建策略】
 
-<img width="1152" height="739" alt="study-index" src="https://github.com/user-attachments/assets/3233598d-452f-4390-b634-858855cac9f3" />
+<img src="./README.assets/Screenshot 2025-08-09 at 7.20.35 PM.png" alt="Screenshot 2025-08-09 at 7.20.35 PM" style="zoom: 25%;" />
 
 将策略代码`supermind.py`内全部复制，粘贴进去。（CTRL+A全选）右侧可以调整自己想要的金额、时间等。
 
