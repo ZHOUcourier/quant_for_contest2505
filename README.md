@@ -20,15 +20,16 @@ This project provides a streamlined solution for preprocessing data in a Tonghua
 
 数据来自[国泰君安CSMAR](https://data.csmar.com/)，顶部tab选择【数据中心】，依次点击【单表查询】【经济研究系列】【宏观经济】【经济行业快讯】【社会消费品零售总额表(月)】全选所有字段，下载csv，解压得到`CME_Mretailsales.csv`。
 
-<img src="./README.assets/Screenshot 2025-08-09 at 11.39.43 PM.png" alt="Screenshot 2025-08-09 at 11.39.43 PM" style="zoom:25%;" />
+<img width="1088" height="1119" alt="Screenshot 2025-08-09 at 11 39 43 PM" src="https://github.com/user-attachments/assets/a9f475c6-5a01-49f8-a980-ca0f696e60f4" />
+
 
 数据来自[国泰君安CSMAR](https://data.csmar.com/)，顶部tab选择【数据中心】，依次点击【单表查询】【经济研究系列】【宏观经济】【景气指数】【消费者景气指数月度文件】全选所有字段，下载csv，解压得到`CME_Mbcid2.csv`。
 
-<img src="./README.assets/Screenshot 2025-08-09 at 11.19.21 PM.png" alt="Screenshot 2025-08-09 at 11.19.21 PM" style="zoom:25%;" />
+<img width="1148" height="1113" alt="Screenshot 2025-08-09 at 11 19 21 PM" src="https://github.com/user-attachments/assets/2c219170-6359-4526-a80c-6e2a5f41eeec" />
 
 数据来自[国泰君安CSMAR](https://data.csmar.com/)，顶部tab选择【数据中心】，依次点击【单表查询】【经济研究系列】【宏观经济】【价格指数】【居民消费价格分类指数月度文件】全选所有字段，下载csv，解压得到`CME_Mconsumerpriceratio.csv`。
 
-<img src="./README.assets/Screenshot 2025-08-09 at 11.42.43 PM.png" alt="Screenshot 2025-08-09 at 11.42.43 PM" style="zoom:25%;" />
+<img width="1085" height="1118" alt="Screenshot 2025-08-09 at 11 42 43 PM" src="https://github.com/user-attachments/assets/9e154592-747d-41a4-a3de-dbcea65e91ee" />
 
 #### 1.2 股票数据获取
 
@@ -40,7 +41,7 @@ This project provides a streamlined solution for preprocessing data in a Tonghua
 
 数据来自[国泰君安CSMAR](https://data.csmar.com/)，顶部tab选择【数据中心】，依次点击【单表查询】【股票市场系列】【股票市场交易】【个股交易数据】【日个股回报率文件】，全选所有字段，下载csv，解压
 
-<img src="./README.assets/Screenshot 2025-08-31 at 4.14.18 PM.png" alt="Screenshot 2025-08-31 at 4.14.18 PM" style="zoom:25%;" />
+<img width="893" height="1150" alt="Screenshot 2025-08-31 at 4 14 18 PM" src="https://github.com/user-attachments/assets/c182aa9b-a34b-4894-b0ac-b4233ea381eb" />
 
 将获取到的csv数据文件放进`dataprocess`目录中。
 
@@ -67,19 +68,19 @@ This project provides a streamlined solution for preprocessing data in a Tonghua
 
 来到[同花顺supermind【我的研究】](https://quant.10jqka.com.cn/view/study-research.html)
 
-<img src="./README.assets/Screenshot 2025-08-09 at 7.14.29 PM.png" alt="Screenshot 2025-08-09 at 7.14.29 PM" style="zoom:50%;" />
+<img width="1603" height="928" alt="Screenshot 2025-08-09 at 7 14 29 PM" src="https://github.com/user-attachments/assets/027c3883-0cd1-42d4-90f3-6408461f4dc3" />
 
 选择python3.8，启动服务器。稍等片刻之后进入jupyter-lab界面。点击【上传文件】按钮，上传`upload`文件夹内所有文件。完成后即可关闭这个页面。
 
-<img src="./README.assets/Screenshot 2025-08-09 at 7.18.06 PM.png" alt="Screenshot 2025-08-09 at 7.18.06 PM" style="zoom: 25%;" />
+<img width="1174" height="998" alt="Screenshot 2025-08-09 at 7 18 06 PM" src="https://github.com/user-attachments/assets/aa538d17-49e2-421c-88d1-ea00e680b868" />
 
-<img src="./README.assets/Screenshot 2025-08-09 at 7.17.39 PM.png" alt="Screenshot 2025-08-09 at 7.15.43 PM" style="zoom: 25%;" />
+<img width="1009" height="598" alt="Screenshot 2025-08-09 at 7 17 39 PM" src="https://github.com/user-attachments/assets/77686efe-1bae-4258-b6f8-f2e704c8d8a4" />
 
 ### 4. 运行策略代码
 
 来到[同花顺supermind【我的策略】](https://quant.10jqka.com.cn/view/study-index.html#/)，点击【新建策略】
 
-<img src="./README.assets/Screenshot 2025-08-09 at 7.20.35 PM.png" alt="Screenshot 2025-08-09 at 7.20.35 PM" style="zoom: 25%;" />
+<img width="1152" height="739" alt="Screenshot 2025-08-09 at 7 20 35 PM" src="https://github.com/user-attachments/assets/61ef77b0-3889-4cf8-97ee-f3121ab452c7" />
 
 将策略代码`supermind.py`内全部复制，粘贴进去。（CTRL+A全选）右侧可以调整自己想要的金额、时间等。
 
